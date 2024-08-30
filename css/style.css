@@ -1,0 +1,185 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #03a3ff;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ナビゲーションバー */
+#navbar {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar ul li {
+    margin: 0 15px;
+}
+
+#navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background 0.3s;
+}
+
+#navbar ul li a:hover {
+    background: #4CAF50;
+    border-radius: 5px;
+}
+
+/* パララックス効果のセクション */
+.parallax {
+    background: url('https://example.com/your-parallax-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+/* セクションのスタイル */
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* 背景画像のセクション */
+.background-image {
+    background: url('https://example.com/your-background-image.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+/* グラデーション背景のセクション */
+.gradient-background {
+    background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+    color: #fff;
+}
+
+/* セクションの見出し */
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* リスト */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: #555;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    background: #4CAF50;
+}
+
+/* フェードインアニメーション */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* スライドインアニメーション (左から) */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.slide-in-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* スライドインアニメーション (右から) */
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.slide-in-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* メールとLinkedInリンクのスタイル */
+section p a {
+    color: #4CAF50;
+    text-decoration: none;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+section p a:hover {
+    background-color: #555;
+}
+
+/* スムーズスクロール */
+html {
+    scroll-behavior: smooth;
+}
+
+/* メディアクエリ (モバイル対応) */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+    }
+
+    #navbar ul li {
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+}
+/* 画像のスタイル */
+.section-image {
+    width: 50%; /* 画像の幅をセクションの50%に設定 */
+    max-width: 400px; /* 最大幅を400pxに設定 */
+    height: auto; /* 高さを自動調整 */
+    margin-top: 20px;
+    border-radius: 8px;
+}
+/* 音楽プレーヤーを非表示にするスタイル */
+audio {
+    display: none;
+}
